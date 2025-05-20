@@ -1,0 +1,431 @@
+﻿<Window x:Class="Ultimate_Boxing_Simulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ultimate_Boxing_Simulator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="587" Width="942">
+    <Window.Resources>
+        <local:BoolToBrushConverter x:Key="BoolToBrushConverter"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Табличка для мого бійця -->
+        <StackPanel x:Name="playerStatsPanel" Margin="10" Grid.Column="0" VerticalAlignment="Top" Visibility="Visible" Background="#FFE2DEDE">
+            <Viewbox Stretch="Uniform" HorizontalAlignment="Left">
+                <TextBlock TextWrapping="Wrap" Text="Ваш гравець" Width="462" FontSize="14" FontWeight="Bold"/>
+            </Viewbox>
+            <Viewbox Stretch="Uniform" HorizontalAlignment="Left">
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Рядок для імені -->
+                    <TextBlock Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Гравець:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <TextBlock Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" Text="{Binding Name}" Width="462" VerticalAlignment="Center" FontSize="14"/>
+
+                    <!-- Рядок для Strength -->
+                    <TextBlock Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Сила:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <ItemsControl Grid.Column="1" Grid.Row="1" ItemsSource="{Binding StrengthTicks}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Rectangle Width="5" Height="14" Fill="{Binding IsFilled, Converter={StaticResource BoolToBrushConverter}}" Margin="1,0" Stroke="Black" StrokeThickness="0.5"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Рядок для Endurance -->
+                    <TextBlock Grid.Column="0" Grid.Row="2" TextWrapping="Wrap" Text="Витривалість:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <ItemsControl Grid.Column="1" Grid.Row="2" ItemsSource="{Binding EnduranceTicks}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Rectangle Width="5" Height="14" Fill="{Binding IsFilled, Converter={StaticResource BoolToBrushConverter}}" Margin="1,0" Stroke="Black" StrokeThickness="0.5"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Рядок для Speed -->
+                    <TextBlock Grid.Column="0" Grid.Row="3" TextWrapping="Wrap" Text="Швидкість:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <ItemsControl Grid.Column="1" Grid.Row="3" ItemsSource="{Binding SpeedTicks}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Rectangle Width="5" Height="14" Fill="{Binding IsFilled, Converter={StaticResource BoolToBrushConverter}}" Margin="1,0" Stroke="Black" StrokeThickness="0.5"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Рядок для Technique -->
+                    <TextBlock Grid.Column="0" Grid.Row="4" TextWrapping="Wrap" Text="Техніка:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <ItemsControl Grid.Column="1" Grid.Row="4" ItemsSource="{Binding TechniqueTicks}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Rectangle Width="5" Height="14" Fill="{Binding IsFilled, Converter={StaticResource BoolToBrushConverter}}" Margin="1,0" Stroke="Black" StrokeThickness="0.5"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Рядок для Reflexes -->
+                    <TextBlock Grid.Column="0" Grid.Row="5" TextWrapping="Wrap" Text="Реакція:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <ItemsControl Grid.Column="1" Grid.Row="5" ItemsSource="{Binding ReflexesTicks}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Rectangle Width="5" Height="14" Fill="{Binding IsFilled, Converter={StaticResource BoolToBrushConverter}}" Margin="1,0" Stroke="Black" StrokeThickness="0.5"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Рядок для Money -->
+                    <TextBlock Grid.Column="0" Grid.Row="6" TextWrapping="Wrap" Text="Кредити:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <TextBlock Grid.Column="1" Grid.Row="6" Text="{Binding Money}" FontSize="14"></TextBlock>
+                </Grid>
+            </Viewbox>
+        </StackPanel>
+
+        <!-- Табличка для суперника -->
+        <StackPanel x:Name="enemyStatsPanel" Margin="10" Grid.Column="1" VerticalAlignment="Top" Visibility="Visible" Background="#FFE2DEDE">
+            <Viewbox Stretch="Uniform" HorizontalAlignment="Left">
+                <TextBlock TextWrapping="Wrap" Text="Ваш наступний суперник" Width="462" FontSize="14" FontWeight="Bold"/>
+            </Viewbox>
+            <Viewbox Stretch="Uniform" HorizontalAlignment="Left">
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Рядок для імені -->
+                    <TextBlock Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Гравець:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <TextBlock Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" Text="{Binding Name}" Width="462" VerticalAlignment="Center" FontSize="14"/>
+
+                    <!-- Рядок для Strength -->
+                    <TextBlock Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Сила:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <ItemsControl Grid.Column="1" Grid.Row="1" ItemsSource="{Binding StrengthTicks}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Rectangle Width="5" Height="14" Fill="{Binding IsFilled, Converter={StaticResource BoolToBrushConverter}}" Margin="1,0" Stroke="Black" StrokeThickness="0.5"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Рядок для Endurance -->
+                    <TextBlock Grid.Column="0" Grid.Row="2" TextWrapping="Wrap" Text="Витривалість:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <ItemsControl Grid.Column="1" Grid.Row="2" ItemsSource="{Binding EnduranceTicks}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Rectangle Width="5" Height="14" Fill="{Binding IsFilled, Converter={StaticResource BoolToBrushConverter}}" Margin="1,0" Stroke="Black" StrokeThickness="0.5"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Рядок для Speed -->
+                    <TextBlock Grid.Column="0" Grid.Row="3" TextWrapping="Wrap" Text="Швидкість:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <ItemsControl Grid.Column="1" Grid.Row="3" ItemsSource="{Binding SpeedTicks}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Rectangle Width="5" Height="14" Fill="{Binding IsFilled, Converter={StaticResource BoolToBrushConverter}}" Margin="1,0" Stroke="Black" StrokeThickness="0.5"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Рядок для Technique -->
+                    <TextBlock Grid.Column="0" Grid.Row="4" TextWrapping="Wrap" Text="Техніка:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <ItemsControl Grid.Column="1" Grid.Row="4" ItemsSource="{Binding TechniqueTicks}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Rectangle Width="5" Height="14" Fill="{Binding IsFilled, Converter={StaticResource BoolToBrushConverter}}" Margin="1,0" Stroke="Black" StrokeThickness="0.5"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Рядок для Reflexes -->
+                    <TextBlock Grid.Column="0" Grid.Row="5" TextWrapping="Wrap" Text="Реакція:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <ItemsControl Grid.Column="1" Grid.Row="5" ItemsSource="{Binding ReflexesTicks}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Rectangle Width="5" Height="14" Fill="{Binding IsFilled, Converter={StaticResource BoolToBrushConverter}}" Margin="1,0" Stroke="Black" StrokeThickness="0.5"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Grid>
+            </Viewbox>
+        </StackPanel>
+
+        <StackPanel x:Name="bottomPanel" Grid.ColumnSpan="2" Background="#FF535353" VerticalAlignment="Bottom" Visibility="Visible">
+            <!-- Думка букмекерів -->
+            <Viewbox Stretch="Uniform" HorizontalAlignment="Center" Margin="10,10,10,0">
+                <Grid Width="682">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal" Grid.Column="0">
+                        <TextBlock TextWrapping="Wrap" Text="Думка букмекерів: " FontSize="14" FontWeight="Bold" Foreground="White" Margin="0,0,5,0"/>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding BettingPrediction}" FontSize="14" Foreground="White"/>
+                    </StackPanel>
+
+                    <Button Grid.Column="1" Content="Історія" Name="ShowLogButton" Background="#FF646464" Foreground="White" Click="ShowLogButton_Click"></Button>
+                </Grid>
+            </Viewbox>
+            <!-- Випадаючий список для вибору стратегії -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10,5,10,0">
+                <TextBlock Text="Стратегія коефіцієнта: " Foreground="White" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <ComboBox x:Name="StrategyComboBox" Width="150" Height="25" SelectionChanged="StrategyComboBox_SelectionChanged">
+                    <ComboBoxItem Content="Базова" IsSelected="True"/>
+                    <ComboBoxItem Content="Збільшена вага швидкості"/>
+                </ComboBox>
+            </StackPanel>
+            <!-- Кнопка до бою -->
+            <Button x:Name="fight_button" VerticalAlignment="Top" Height="30" Content="До бою!" Click="fight_button_click" Margin="10,10,10,0" Background="LightGray" FontWeight="Bold"/>
+            <!-- Кнопка магазину -->
+            <Button x:Name="shop_button" VerticalAlignment="Bottom" Height="30" Content="Магазин" Click="shop_button_Click" Margin="10,0,10,14" Background="LightGray" FontWeight="Bold"/>
+        </StackPanel>
+
+        <!-- Панель магазину -->
+        <DockPanel Grid.ColumnSpan="2" Name="shop_panel" Margin="5,5,5,0" Visibility="Collapsed">
+            <!-- Вміст магазину -->
+            <StackPanel DockPanel.Dock="Top">
+                <!-- Заголовок "Магазин" -->
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center" Width="462">
+                    <TextBlock TextWrapping="Wrap" Text="Магазин" Width="462" FontSize="16" TextAlignment="Center" FontWeight="Bold"/>
+                </Viewbox>
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center" Width="462">
+                    <TextBlock Name="moneyText" TextWrapping="Wrap" Text="{Binding Money, StringFormat=Кредити: {0}}" Width="462" FontSize="16" TextAlignment="Center" FontWeight="Bold"/>
+                </Viewbox>
+
+                <!-- Сітка для чотирьох колонок -->
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Дешеві предмети -->
+                    <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+                        <ItemsControl x:Name="CheapItemsList" Margin="5">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Margin="2" Click="BuyButton_Click" Background="Transparent" BorderThickness="0">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock Text="{Binding Price, StringFormat={}{0} кредитів}"/>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                        <StackPanel Width="70">
+                                            <Image Source="{Binding IconPath}" Width="70" Height="70"/>
+                                            <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" FontSize="10" TextWrapping="Wrap" TextAlignment="Center" MaxWidth="60"/>
+                                        </StackPanel>
+                                    </Button>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+
+                    <!-- Посилені дешеві предмети -->
+                    <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+                        <ItemsControl x:Name="ReinforcedCheapItemsList" Margin="5">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Margin="2" Click="BuyButton_Click" Background="Transparent" BorderThickness="0">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock Text="{Binding Price, StringFormat={}{0} кредитів}"/>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                        <StackPanel Width="70">
+                                            <Image Source="{Binding IconPath}" Width="70" Height="70"/>
+                                            <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" FontSize="10" TextWrapping="Wrap" TextAlignment="Center" MaxWidth="60"/>
+                                        </StackPanel>
+                                    </Button>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+
+                    <!-- Середні предмети -->
+                    <ScrollViewer Grid.Column="2" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+                        <ItemsControl x:Name="MediumItemsList" Margin="5">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Margin="2" Click="BuyButton_Click" Background="Transparent" BorderThickness="0">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock Text="{Binding Price, StringFormat={}{0} кредитів}"/>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                        <StackPanel Width="70">
+                                            <Image Source="{Binding IconPath}" Width="70" Height="70"/>
+                                            <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" FontSize="10" TextWrapping="Wrap" TextAlignment="Center" MaxWidth="60"/>
+                                        </StackPanel>
+                                    </Button>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+
+                    <!-- Дорогі предмети -->
+                    <ScrollViewer Grid.Column="3" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+                        <ItemsControl x:Name="ExpensiveItemsList" Margin="5">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Margin="2" Click="BuyButton_Click" Background="Transparent" BorderThickness="0">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock Text="{Binding Price, StringFormat={}{0} кредитів}"/>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                        <StackPanel Width="70">
+                                            <Image Source="{Binding IconPath}" Width="70" Height="70"/>
+                                            <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" FontSize="10" TextWrapping="Wrap" TextAlignment="Center" MaxWidth="60"/>
+                                        </StackPanel>
+                                    </Button>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+
+                    <!-- Бустери -->
+                    <ScrollViewer Grid.Column="4" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+                        <ItemsControl x:Name="BoostersList" Margin="5">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Margin="2" Click="BuyButton_Click" Background="Transparent" BorderThickness="0">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock Text="{Binding Price, StringFormat={}{0} кредитів}"/>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                        <StackPanel Width="70">
+                                            <Image Source="{Binding IconPath}" Width="70" Height="70"/>
+                                            <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" FontSize="10" TextWrapping="Wrap" TextAlignment="Center" MaxWidth="60"/>
+                                        </StackPanel>
+                                    </Button>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Grid>
+            </StackPanel>
+        </DockPanel>
+        <Grid x:Name="backButtonGrid" VerticalAlignment="Bottom" Background="#FF535353" Height="60" Grid.ColumnSpan="2" Visibility="Collapsed">
+            <!-- Кнопка "Назад" -->
+            <Button x:Name="leaveShop_button" VerticalAlignment="Bottom" Height="30" Content="Назад" Click="backButton_click" Margin="10,0,10,14" Background="LightGray" FontWeight="Bold"/>
+        </Grid>
+
+        <StackPanel x:Name="LogPanel" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Background="#FF535353" Visibility="Collapsed" Height="200">
+            <Button x:Name="CloseLogButton" Content="Закрити" Click="CloseLogButton_Click" HorizontalAlignment="Right" Margin="5,5,5,0" Width="80" Background="LightGray" FontWeight="Bold"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="5" Height="170">
+                <ListBox ItemsSource="{Binding Logs}" FontSize="12" Foreground="Black" Padding="5" FontWeight="Bold">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Window>
