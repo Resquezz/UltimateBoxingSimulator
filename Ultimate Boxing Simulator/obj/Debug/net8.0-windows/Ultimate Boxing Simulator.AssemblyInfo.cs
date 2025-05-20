@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ultimate Boxing Simulator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbf02e245496df44c7df8cf7157afba15bd4dba8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ultimate Boxing Simulator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ultimate Boxing Simulator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

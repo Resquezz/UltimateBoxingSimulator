@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\TUF\\Desktop\\Ultimate Boxing Simulator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|c:\\users\\tuf\\desktop\\ultimate boxing simulator\\ultimate boxing simulator\\fighters\\maincharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|solutionrelative:ultimate boxing simulator\\fighters\\maincharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|c:\\users\\tuf\\desktop\\ultimate boxing simulator\\ultimate boxing simulator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|solutionrelative:ultimate boxing simulator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|c:\\users\\tuf\\desktop\\ultimate boxing simulator\\ultimate boxing simulator\\fighters\\states\\tiredstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|solutionrelative:ultimate boxing simulator\\fighters\\states\\tiredstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,10 +27,6 @@
       "RelativeMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|solutionrelative:ultimate boxing simulator\\fighters\\states\\icharacterstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|c:\\users\\tuf\\desktop\\ultimate boxing simulator\\ultimate boxing simulator\\fighters\\maincharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|solutionrelative:ultimate boxing simulator\\fighters\\maincharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|c:\\users\\tuf\\desktop\\ultimate boxing simulator\\ultimate boxing simulator\\strategies\\coefficientstrategies\\basecoefficientstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|solutionrelative:ultimate boxing simulator\\strategies\\coefficientstrategies\\basecoefficientstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|c:\\users\\tuf\\desktop\\ultimate boxing simulator\\ultimate boxing simulator\\fighters\\maincharacterproxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|solutionrelative:ultimate boxing simulator\\fighters\\maincharacterproxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|c:\\users\\tuf\\desktop\\ultimate boxing simulator\\ultimate boxing simulator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|solutionrelative:ultimate boxing simulator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58C13B3E-E538-485F-BB24-F56BF0EF2D5A}|Ultimate Boxing Simulator\\Ultimate Boxing Simulator.csproj|c:\\users\\tuf\\desktop\\ultimate boxing simulator\\ultimate boxing simulator\\equipment\\concrete products\\energydrink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -110,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
@@ -162,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "BaseCoefficientStrategy.cs",
               "DocumentMoniker": "C:\\Users\\TUF\\Desktop\\Ultimate Boxing Simulator\\Ultimate Boxing Simulator\\Strategies\\CoefficientStrategies\\BaseCoefficientStrategy.cs",
               "RelativeDocumentMoniker": "Ultimate Boxing Simulator\\Strategies\\CoefficientStrategies\\BaseCoefficientStrategy.cs",
@@ -174,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ICoefficientStrategy.cs",
               "DocumentMoniker": "C:\\Users\\TUF\\Desktop\\Ultimate Boxing Simulator\\Ultimate Boxing Simulator\\Strategies\\CoefficientStrategies\\ICoefficientStrategy.cs",
               "RelativeDocumentMoniker": "Ultimate Boxing Simulator\\Strategies\\CoefficientStrategies\\ICoefficientStrategy.cs",
@@ -198,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MainCharacterProxy.cs",
               "DocumentMoniker": "C:\\Users\\TUF\\Desktop\\Ultimate Boxing Simulator\\Ultimate Boxing Simulator\\Fighters\\MainCharacterProxy.cs",
               "RelativeDocumentMoniker": "Ultimate Boxing Simulator\\Fighters\\MainCharacterProxy.cs",
@@ -210,15 +210,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "MainCharacter.cs",
               "DocumentMoniker": "C:\\Users\\TUF\\Desktop\\Ultimate Boxing Simulator\\Ultimate Boxing Simulator\\Fighters\\MainCharacter.cs",
               "RelativeDocumentMoniker": "Ultimate Boxing Simulator\\Fighters\\MainCharacter.cs",
               "ToolTip": "C:\\Users\\TUF\\Desktop\\Ultimate Boxing Simulator\\Ultimate Boxing Simulator\\Fighters\\MainCharacter.cs",
               "RelativeToolTip": "Ultimate Boxing Simulator\\Fighters\\MainCharacter.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAkwDEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAUwEEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T20:49:45.463Z"
+              "WhenOpened": "2025-04-10T20:49:45.463Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -234,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "InjuredState.cs",
               "DocumentMoniker": "C:\\Users\\TUF\\Desktop\\Ultimate Boxing Simulator\\Ultimate Boxing Simulator\\Fighters\\States\\InjuredState.cs",
               "RelativeDocumentMoniker": "Ultimate Boxing Simulator\\Fighters\\States\\InjuredState.cs",
@@ -246,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TiredState.cs",
               "DocumentMoniker": "C:\\Users\\TUF\\Desktop\\Ultimate Boxing Simulator\\Ultimate Boxing Simulator\\Fighters\\States\\TiredState.cs",
               "RelativeDocumentMoniker": "Ultimate Boxing Simulator\\Fighters\\States\\TiredState.cs",
@@ -259,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ReadyState.cs",
               "DocumentMoniker": "C:\\Users\\TUF\\Desktop\\Ultimate Boxing Simulator\\Ultimate Boxing Simulator\\Fighters\\States\\ReadyState.cs",
               "RelativeDocumentMoniker": "Ultimate Boxing Simulator\\Fighters\\States\\ReadyState.cs",
@@ -271,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ICharacterState.cs",
               "DocumentMoniker": "C:\\Users\\TUF\\Desktop\\Ultimate Boxing Simulator\\Ultimate Boxing Simulator\\Fighters\\States\\ICharacterState.cs",
               "RelativeDocumentMoniker": "Ultimate Boxing Simulator\\Fighters\\States\\ICharacterState.cs",
@@ -391,15 +392,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\TUF\\Desktop\\Ultimate Boxing Simulator\\Ultimate Boxing Simulator\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Ultimate Boxing Simulator\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\TUF\\Desktop\\Ultimate Boxing Simulator\\Ultimate Boxing Simulator\\MainWindow.xaml.cs",
               "RelativeToolTip": "Ultimate Boxing Simulator\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAIwHEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAA0wBsAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T21:44:29.272Z"
+              "WhenOpened": "2025-03-19T21:44:29.272Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

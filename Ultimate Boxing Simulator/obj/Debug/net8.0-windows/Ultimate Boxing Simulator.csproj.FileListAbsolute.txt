@@ -19,3 +19,4 @@ C:\Users\TUF\Desktop\Ultimate Boxing Simulator\Ultimate Boxing Simulator\obj\Deb
 C:\Users\TUF\Desktop\Ultimate Boxing Simulator\Ultimate Boxing Simulator\obj\Debug\net8.0-windows\Ultimate Boxing Simulator.genruntimeconfig.cache
 C:\Users\TUF\Desktop\Ultimate Boxing Simulator\Ultimate Boxing Simulator\obj\Debug\net8.0-windows\ref\Ultimate Boxing Simulator.dll
 C:\Users\TUF\Desktop\Ultimate Boxing Simulator\Ultimate Boxing Simulator\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\TUF\Desktop\Ultimate Boxing Simulator\Ultimate Boxing Simulator\obj\Debug\net8.0-windows\Ultimate Boxing Simulator.sourcelink.json
